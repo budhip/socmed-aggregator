@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>SOCMED AGGREGATOR</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/ajxtwit.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <button type="button" class="btn btn-primary" onclick="window.location='index.html'">Back</button>
+        </div>
+        <div class="col-xs-5">
+          <div class="panel panel-default" style="margin-top: 40px;">
+            <div class="panel-heading">
+              <h3 class="panel-title">Ngetweet</h3>
+            </div>
+            <form id="form-ngetweet" method="post">
+              <div class="panel-body">
+                <input type="text" class="form-control" id="status" name="status" placeholder="Apa yang sedang terjadi?">
+              </div>
+              <div class="panel-footer">
+                <button id="ngetweet" type="button" class="btn btn-primary" onclick="window.location.reload()">Tweet</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="panel panel-default" style="margin-top: 40px;">
+            <div class="panel-heading">
+              <h3 class="panel-title">Beranda</h3>
+            </div>
+            <div class="panel-body">
+              <ul id="timeline" class="list-group">
+
+              </ul>
+              <template id="tweet">
+                <li class="tweet list-group-item">
+                  <div>
+                    <img alt="" class="avatar img-circle">
+                    <span class="name"></span>
+                    <span class="user"></span>
+                  </div>
+                  <div>
+                    <span class="body"></span>
+                  </div>
+                  <div class="">
+                    <span class="retweet"></span>
+                      <span class="favorite"></span>
+                  </div>
+                </li>
+              </template>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-5">
+          <div class="panel panel-default" style="margin-top: 40px;">
+            <div class="panel-heading">
+              <h3 class="panel-title">Cari</h3>
+            </div>
+            <form id="form-cari" method="post">
+              <div class="panel-body">
+                <input type="text" class="form-control" id="search" name="search" placeholder="Cari di Twitter">
+              </div>
+              <div class="panel-footer">
+                <button id="cari-tweet" type="button" class="btn btn-primary">Cari</button>
+              </div>
+            </form>
+          </div>
+          <ul id="hasil-pencarian" class="list-group">
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
