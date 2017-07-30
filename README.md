@@ -40,22 +40,22 @@ Menggunakan framework express.js
 ├── client
 │   ├── js
 │   │   ├── ajxtwit.js
-|   |   └── fblogin.js
+│   │   └── fblogin.js
 │   ├── fb-page.html
-|   ├── index.html
-|   └── twitter-page.html
+│   ├── index.html
+│   └── twitter-page.html
 └── server
     ├── controllers
-    |   ├── ngetweetController.js
-    |   └── searchController.js
-    |   └── timelineController.js
+    │   ├── ngetweetController.js
+    │   └── searchController.js
+    │   └── timelineController.js
     ├── helpers
-    |   └── forGetContent.js
+    │   └── forGetContent.js
     ├── routers
-    |   ├── fb.js
-    |   └── post.js
-    |   └── search.js
-    |   └── timeline.js
+    │   ├── fb.js
+    │   └── post.js
+    │   └── search.js
+    │   └── timeline.js
     ├── app.js
     └── package.json
 ```
